@@ -4,5 +4,5 @@ from pages.login_page import LoginPage
 def test_empty_login(page: Page) -> None:
     lp = LoginPage(page)
     lp.navigate()
-    lp.login("", "")
+    lp.login("", "secret_sauce")
     expect(lp.error).to_contain_text("Epic sadface: Username is required")
